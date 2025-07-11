@@ -543,3 +543,58 @@ footer {
     
     .publication-card { flex-direction: column; text-align: center; }
 }
+
+
+/* --- Skills Section (Updated List Style) --- */
+.skills-list {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.skill-item {
+    background: #fff; /* White background for each item to stand out on the off-white section bg */
+    padding: 25px;
+    margin-bottom: 20px;
+    border-left: 4px solid var(--primary-color);
+    border-radius: 5px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.skill-item:hover {
+    transform: scale(1.02);
+}
+
+.skill-item h3 {
+    font-size: 1.4rem;
+    color: var(--secondary-color);
+}
+
+.skill-meta {
+    font-weight: 600;
+    color: var(--text-light);
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.skill-item ul {
+    list-style-type: none; /* Removes default bullets */
+    padding-left: 0;
+}
+
+.skill-item ul li {
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 25px;
+}
+
+.skill-item ul li::before {
+    content: '\f00c'; /* Font Awesome check icon */
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    top: 4px;
+    color: var(--primary-color);
+    font-size: 0.9rem;
+}
