@@ -1,16 +1,38 @@
-/* --- General Setup & Variables --- */
+/* --- General Setup & Variables (Updated for new background) --- */
 :root {
     --primary-color: #007BFF;
     --primary-hover: #0056b3;
     --secondary-color: #343a40;
-    --background-light: #f8f9fa;
-    --background-dark: #ffffff;
-    --text-color: #333;
-    --text-light: #6c757d;
+    
+    /* New Aesthetic Background */
+    --background-light: #f5f7fa; /* A slightly darker, complementary off-white for alt sections */
+    --background-dark: #ffffff; /* This will now be the background for individual cards/items */
+    --background-main: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); /* The new gradient background */
+
+    --text-color: #2c3e50; /* A slightly softer black for better readability on the new bg */
+    --text-light: #57606f;
     --border-color: #dee2e6;
-    --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Softened the shadow slightly */
     --font-family: 'Poppins', sans-serif;
 }
+
+/* Add this rule right below the :root block */
+body {
+    font-family: var(--font-family);
+    color: var(--text-color);
+    line-height: 1.7;
+    
+    /* Applying the new background */
+    background-color: #f5f7fa; /* Fallback for older browsers */
+    background-image: var(--background-main);
+}
+
+/* And update the .alt-bg rule to use the new variable */
+.alt-bg {
+    background-color: var(--background-light);
+    background-image: none; /* Ensure alt sections don't have the gradient */
+}
+
 
 * {
     margin: 0;
